@@ -18,6 +18,8 @@
 }
 
 body {
+  display: grid;
+  place-items: center;
   min-height: 100vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 0.8125rem;
@@ -27,8 +29,10 @@ body {
 
 main {
   display: grid;
-  place-items: center;
-  min-height: calc(100vh - 2rem);
+  gap: 1.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 74rem;
+  padding: 4rem 2rem 2rem;
 }
 
 h1 {
@@ -37,14 +41,6 @@ h1 {
   text-align: center;
   color: var(--color-blackblue-dark);
   padding-top: 1rem;
-}
-
-section {
-  display: grid;
-  gap: 1.75rem;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 74rem;
-  padding: 4rem 2rem 2rem;
 }
 
 article {
@@ -119,10 +115,9 @@ article:nth-of-type(5) {
 }
 
 footer {
-  height: 2rem;
   font-size: 11px;
   text-align: center;
-  padding-top: 0.75rem;
+  padding: 0.75rem 0;
 }
 
 footer a {
@@ -130,7 +125,7 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  section {
+  main {
     grid-template-columns: 1fr;
     width: 100%;
   }
